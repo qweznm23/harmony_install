@@ -1,0 +1,27 @@
+{
+  "app": {
+    "bundleName": "me.xdd.widget",
+    "bundleType": "app",
+    "versionCode": 2,
+    "versionName": "2.0.0",
+    "label": "MyWidget",
+    "deployDomain": "qweznm23.github.io",
+    "icons": {
+      "normal": "https://qweznm23.github.io/harmony_install/icon.png",
+      "large": "https://qweznm23.github.io/harmony_install/icon.png"
+    },
+    "minAPIVersion": "5.0.0(12)",
+    "targetAPIVersion": "5.0.0(12)",
+    "modules": [
+      {
+        "name": "entry",
+        "type": "entry",
+        "deviceTypes": [
+          "phone"
+        ],
+        "packageUrl": "https://qweznm23.github.io/harmony_install/MyWidget-HarmonyOS-signed-2.0.0-v2-20260709-2004.hap",
+        "packageHash": "257B3B846B2DF19A1F06DFE4E2D6C6CC0D89F57552340012B98FBA678F450939"
+      }
+    ]
+  }
+}

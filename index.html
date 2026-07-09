@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyWidget 鸿蒙版安装</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #162033;
+      --muted: #667085;
+      --line: #d9e0ea;
+      --primary: #0f766e;
+      --primary-press: #115e59;
+      --code-bg: #eef3f8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101418;
+        --panel: #171d23;
+        --text: #eef2f6;
+        --muted: #a7b0bd;
+        --line: #2c3641;
+        --primary: #2dd4bf;
+        --primary-press: #14b8a6;
+        --code-bg: #202832;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(100%, 520px);
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+
+    .version {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .panel {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .install {
+      width: 100%;
+      height: 48px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .install:active {
+      background: var(--primary-press);
+    }
+
+    .meta {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta li:last-child {
+      border-bottom: 0;
+    }
+
+    code {
+      overflow-wrap: anywhere;
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: var(--code-bg);
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .hint {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="app" aria-label="应用信息">
+      <img class="icon" src="./icon.png" alt="MyWidget 图标">
+      <div>
+        <h1>MyWidget 鸿蒙版</h1>
+        <div class="version">2.0.0 · versionCode 2</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <button class="install" type="button" onclick="installApp()">安装应用</button>
+      <p class="hint">请使用鸿蒙设备的华为浏览器打开本页面，并在安装前卸载旧版。</p>
+
+      <ul class="meta">
+        <li>
+          <span>包名</span>
+          <code>me.xdd.widget</code>
+        </li>
+        <li>
+          <span>签名包</span>
+          <code>MyWidget-HarmonyOS-signed-2.0.0-v2-20260709-2004.hap</code>
+        </li>
+        <li>
+          <span>SHA256</span>
+          <code>257B3B846B2DF19A1F06DFE4E2D6C6CC0D89F57552340012B98FBA678F450939</code>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function installApp() {
+      const manifestUrl = encodeURIComponent('https://qweznm23.github.io/harmony_install/manifest.json5')
+      window.location.href = `store://enterprise/manifest?url=${manifestUrl}`
+    }
+  </script>
+</body>
+</html>

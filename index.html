@@ -148,7 +148,7 @@
 
     <section class="panel">
       <button class="install" type="button" onclick="installApp()">安装应用</button>
-      <p class="hint">请使用鸿蒙设备的华为浏览器打开本页面，并在安装前卸载旧版。</p>
+      <p class="hint">请使用鸿蒙设备的华为浏览器打开本页面，并在安装前卸载旧版。要求 HarmonyOS 6.0.2（API 22）或更高版本。</p>
 
       <ul class="meta">
         <li>
@@ -157,11 +157,11 @@
         </li>
         <li>
           <span>签名包</span>
-          <code>MyWidget-HarmonyOS-signed-2.0.0-v2-20260709-2004.hap</code>
+          <code>MyWidget-HarmonyOS-release-2.0.0-v2-20260710-1627.hap</code>
         </li>
         <li>
           <span>SHA256</span>
-          <code>257B3B846B2DF19A1F06DFE4E2D6C6CC0D89F57552340012B98FBA678F450939</code>
+          <code>8B450C39D89F27CE801CD138AE60F1243C2B6E271BE012A84C1082171A10658F</code>
         </li>
       </ul>
     </section>
@@ -169,7 +169,7 @@
 
   <script>
     function installApp() {
-      const manifestUrl = encodeURIComponent('https://qweznm23.github.io/harmony_install/manifest.json5')
+      const manifestUrl = encodeURIComponent('https://qweznm23.github.io/harmony_install/manifest-v2-release.json5')
       window.location.href = `store://enterprise/manifest?url=${manifestUrl}`
     }
   </script>

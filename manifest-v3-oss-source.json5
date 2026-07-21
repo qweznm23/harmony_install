@@ -2,8 +2,8 @@
   "app": {
     "bundleName": "me.xdd.widget",
     "bundleType": "app",
-    "versionCode": 9,
-    "versionName": "2.0.7",
+    "versionCode": 10,
+    "versionName": "2.0.8",
     "label": "MyWidget",
     "deployDomain": "mywidget.oss-cn-beijing.aliyuncs.com",
     "icons": {
@@ -19,8 +19,8 @@
         "deviceTypes": [
           "phone"
         ],
-        "packageUrl": "https://mywidget.oss-cn-beijing.aliyuncs.com/MyWidget-HarmonyOS-release-2.0.7-v9-20260721-1057.hap",
-        "packageHash": "DD3808E7171B7D19781F805D17D30D2E2831D358D11FEE9D27CC09BFC1E153C7"
+        "packageUrl": "https://mywidget.oss-cn-beijing.aliyuncs.com/MyWidget-HarmonyOS-release-2.0.8-v10-20260721-1127.hap",
+        "packageHash": "C1B99B00816782DFADB350F449DAF3C89DCC3B48696BFE0529463FE69823A25F"
       }
     ]
   }

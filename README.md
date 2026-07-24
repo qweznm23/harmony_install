@@ -17,7 +17,7 @@ store://enterprise/manifest?url=https%3A%2F%2Fmywidget.oss-cn-beijing.aliyuncs.c
 ```text
 https://mywidget.oss-cn-beijing.aliyuncs.com/manifest-v3-oss-release.json5
 https://mywidget.oss-cn-beijing.aliyuncs.com/icon.png
-https://mywidget.oss-cn-beijing.aliyuncs.com/MyWidget-HarmonyOS-release-2.0.11-v13-20260723-1650.hap
+https://mywidget.oss-cn-beijing.aliyuncs.com/MyWidget-HarmonyOS-release-2.0.12-v14-20260724-1444.hap
 ```
 
 `manifest-v3-oss-source.json5` 是待签名源文件，`manifest-v3-oss-release.json5` 是使用应用签名证书生成并通过官方工具验签的发布清单。
@@ -31,12 +31,13 @@ versionCode: 2
 buildMode: release
 minAPIVersion: 6.0.2(22)
 targetAPIVersion: 6.0.2(22)
-packageHash: 34482D4BF4BAA888D0749D3D6FC5052F37B59A6700CC78808F43473BC4A39C10
+packageHash: 319AAB09A76D572249FC0FA2AD4D624FD299C14CB81FE257DB5196ED7D7A3515
 ```
 
 真机安装前需要先卸载旧版，因为旧包曾使用 `versionCode: 1000000`。
 
 当前 HAP 最低要求 HarmonyOS `6.0.2(22)`，分发清单中的 API 版本必须与 HAP 内 `module.json` 保持一致。
+
 
 
 
